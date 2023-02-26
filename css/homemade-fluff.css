@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "Courgette";
+  src: url(fonts/Courgette-Regular.ttf);
+}
+
+html {
+  font-size: 62.5%;
+  --gap: 1.6rem;
+  --text-primary: black;
+  --bg-primary: rgba(218, 218, 247, 0.733);
+  opacity: 100% !important;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "courgette" !important;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  color: var(--text-primary);
+  background-image: no-repeat center cover !important;
+  background-size: 100% 100%;
+  grid-template-rows: var(--header-height) 1fr var(--footer-height);
+}
+
+main {
+  font-size: 1.6rem;
+  margin-top: 10rem;
+  margin: 4rem;
+  flex-wrap: nowrap;
+}
+
+p {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  margin-top: 10rem;
+  display: flex;
+  margin: 5rem;
+  flex-wrap: nowrap;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 10rem;
+  box-shadow: 0 0.8em 0.8em -0.7em black;
+}
+
+.navbar-nav {
+  gap: 0.8rem;
+}
+.navbar-nav a {
+  font-size: 2.5rem;
+  flex: none;
+  transition: 0.25s;
+  color: black !important;
+}
+
+.navbar-nav a:hover {
+  transform: translateY(0.25em);
+}
+
+.logo {
+  display: flex;
+  column-gap: var(--gap);
+  text-decoration: none;
+  align-items: center;
+}
+
+.logo img {
+  height: 4rem;
+}
+
+.logo h1 {
+  display: inline-flex;
+  font-size: 3.6rem;
+}
+
+.logo h1 span {
+  color: var(--text-primary);
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.container {
+  position: relative;
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
+
+.menu {
+  background: var(--bg-primary);
+  position: absolute;
+  margin-right: 2rem;
+  right: 4rem;
+  top: 0;
+  padding: 1rem;
+  padding-top: 0;
+  border: 1px solid var(--bg-primary);
+  border-radius: 1rem;
+  box-shadow: 0.1em 0.1em 2em 0.6em var(--bg-primary);
+}
+/* MAIN */
+.main-text p {
+  max-width: 30rem;
+}
+/* GALLERY.HTML */
+
+.gallery {
+  padding: var(--gap);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: var(--gap);
+}
+.gallery a {
+  width: 26rem;
+  font-size: 0;
+  text-decoration: none;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.gallery img {
+  flex-grow: 1;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  transition: 300ms;
+  filter: grayscale(100%);
+  border-radius: 1.5rem;
+}
+
+.gallery img:hover {
+  transform: scale(1.1, 1.1);
+  filter: grayscale(0%);
+  border-radius: none;
+}
+
+/*  CONTACT.HTML */
+.contact {
+  align-items: center;
+  padding: 3rem;
+  display: flex;
+  grid-template-columns: auto auto;
+  grid-template-rows: min-content;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+}
+
+.contact input {
+  width: 100%;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.map {
+  padding: var(--gap);
+  margin: var(--gap);
+}
+
+.map p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.6rem;
+  align-items: center;
+}
+
+.formular {
+  width: 50rem;
+  font-size: 1.6rem;
+  font-family: "Courier New", Courier, monospace;
+  padding: var(--gap);
+  margin: var(--gap);
+}
+.contact textarea {
+  resize: none;
+}
+
+.contact button {
+  font-weight: bold;
+}
+/* FOOTER */
+footer {
+  display: flex;
+  border-top: 1px solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+footer h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.8rem;
+  text-align: center;
+}
